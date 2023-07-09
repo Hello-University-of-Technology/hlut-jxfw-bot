@@ -1,4 +1,4 @@
-import encryptPassword from "../crypto.js";
+import encryptPassword from "../Utils/crypto.js";
 
 
 

@@ -51,8 +51,8 @@ bot.command("sub", async (ctx) => {
     return;
   }
   ctx.session.hasSub = true;
-  await addCronJob(bot, adapter, ctx.chat.id.toString())
   ctx.reply("订阅课表成功");
+  await addCronJob(bot, adapter, ctx.chat.id.toString())
 });
 
 bot.command("unsub", async (ctx) => {
