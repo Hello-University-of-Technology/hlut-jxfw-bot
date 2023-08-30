@@ -38,7 +38,12 @@ bot.command(
 
 bot.command(
   "help",
-  (ctx) => ctx.reply("`/login <学号> <密码>` 登录\n`/info <学年学期> <周次>` 获取该学年学期和周次的课表(如`/info 202202 5`代表2022年度第二学期第五周\n`/info` 获取当前课表", {parse_mode: "Markdown"}),
+  (ctx) => ctx.reply("`/login <学号> <密码>` 登录\
+  \n`/info <学年学期> <周次>` 获取该学年学期和周次的课表(如`/info 202202 5`代表2022年度第二学期第五周\
+  \n`/info` 获取当前课表\
+  \n`/sub` 订阅课表\
+  \n`/unsub` 取消课表订阅"
+  , {parse_mode: "Markdown"}),
 );
 
 bot.command("sub", async (ctx) => {

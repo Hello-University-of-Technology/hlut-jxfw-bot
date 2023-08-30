@@ -60,7 +60,7 @@ export async function ssoLoginForTokenURL(
   username: string | number,
   password: string,
   authURL =
-    "https://authserver.gdut.edu.cn/authserver/login?service=http%3A%2F%2Fjxfw.gdut.edu.cn%2Fnew%2FssoLogin",
+    "https://authserver.gdut.edu.cn/authserver/login?service=https%3A%2F%2Fjxfw.gdut.edu.cn%2Fnew%2FssoLogin",
 ) {
   const authResponse = await getLoginSSOResponse(authURL, username, password);
   const tokenURL = authResponse.headers.get("Location");
