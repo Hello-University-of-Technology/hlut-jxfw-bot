@@ -29,7 +29,7 @@ export async function addCronJob(bot: Bot<MyContext>,adapter: FileAdapter<Sessio
     }
   });
 
-  const job2 = new Cron('0 18 * * * *', async () => {
+  const job2 = new Cron('0 0 18 * * *', async () => {
     try {
       const session = await adapter.read(chatid);
       if (session == undefined || session.jxfwMgr == undefined) {
