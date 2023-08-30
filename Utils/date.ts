@@ -22,15 +22,15 @@ export function jc_to_date(jc: number) {
     case 8:
       return hhmm(16, 30);
     case 9:
-      return hhmm(16, 30);
-    case 10:
       return hhmm(17, 20);
-    case 11:
+    case 10:
       return hhmm(18, 30);
-    case 12:
+    case 11:
       return hhmm(19, 20);
+    case 12:
+      return hhmm(20, 10);
     default:
-      return hhmm(0, 0);
+      return hhmm(23, 59);
   }
 }
 
