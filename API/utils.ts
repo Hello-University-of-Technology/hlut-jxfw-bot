@@ -8,10 +8,11 @@ async function getCurriculum(mgr: JxfwMgr, text: "初始化"|"更新", xnxq: str
   if (xnxq == undefined || zc == undefined) {
     [xnxq, zc] = await mgr.获取当前学年学期代码和周次();
   }
-  const 一周课表 = zc != '' ? (await mgr.获取一周课表和日期(xnxq, zc)).一周课表 : [];
   const now = new Date();
   const day = now.getDay();
   const nowhm = hhmm(now.getHours(), now.getMinutes()).getTime();
+  if (day == 0) { zc = (parseInt(zc) + 1).toString(); }
+  const 一周课表 = zc != '' ? (await mgr.获取一周课表和日期(xnxq, zc)).一周课表 : [];
 
   const stringify = (x: 上课详细信息) => {
     // 86400000 = 1000 * 60 * 60 * 24 一天的毫秒数
